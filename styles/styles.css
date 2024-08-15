@@ -1,38 +1,52 @@
 /* Basic styling */
 /*-----------------------------------------------------*/
 
+body {
+
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "side-bar  list-area"
+    "nav  list-area";
+  grid-template-rows: 64px 1fr 64px;
+  grid-template-columns: 40% 60%;
+  background-color: #091317;
+}
+
 /* Title And Navigation(?) Styling */
 #title {
 
-  position:absolute;
-  top: 10px;
-  left: 20px;
-  
+  margin: 0;
   
 }
 
+#logo {
 
+  margin: 0;
+}
 
-.rectangle {
+.header {
 
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100px;
-  width: 100%;
-  background-color: #698cc2;
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-between;
+
+ 
+  background-color: #7c7c7c;
   
 
 }
 
 /* List Styling */
 
-p {
+/* p {
 
   margin-top: 0%;
   margin-bottom: 0%;
 
-}
+} */
 
 li {
   list-style-type: "🔲";
@@ -43,19 +57,19 @@ li {
 
 h1 {
   font-size: 475%;
-  color: #222d30;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  color: #ffffff;
+  /* margin-top: 0px;
+  margin-bottom: 0px; */
 }
 
 ul {
   font-size: 175%;
-  color: #020525;
+  color: #ffffff;
 
   /* position: relative; */
-  margin-top: 15%;
+  /* margin-top: 15%;
   margin-left: 10%;
-  width: 10cm;
+  width: 10cm; */
 }
 
 /* Delete Button Styling */
@@ -65,10 +79,7 @@ button.deleteBtn {
   background-color: #ffffff;
   border-radius: 20em;
   border-color: #ff0000;
-  border-style: outset;
-
-  
-  
+  border-style: outset;  
 
 }
 
@@ -98,7 +109,7 @@ button.deleteBtn:active {
 
   /*for debugging*/             
   /*border: 1px solid red;*/
-  outline: auto;
+  /* outline: auto; */
 }
 
 /* @media (max-width: 30em) {
