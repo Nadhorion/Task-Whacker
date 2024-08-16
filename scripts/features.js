@@ -180,9 +180,17 @@ function renderTaskList() {
     let textBox = document.createElement("p");
     textBox.textContent = taskText;
 
+    let checkBox = document.createElement("button");
+    checkBox.className = "checkboxes";
+    checkBox.id = i;
+
+    const div = document.createElement("div");
+    div.className = "liMainContent";
     const li = document.createElement("li");
     //li.textContent = taskText;
-    li.appendChild(textBox);
+    div.appendChild(checkBox);
+    div.appendChild(textBox);
+    li.appendChild(div);
     li.appendChild(deleteBtn);
     list.append( li );
 

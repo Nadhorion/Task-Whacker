@@ -3,6 +3,9 @@
 
 body {
 
+  margin: 0;
+  width: 97vw;
+  height: 97vh;
   display: grid;
   grid-template-areas:
     "header header"
@@ -11,18 +14,24 @@ body {
   grid-template-rows: 64px 1fr 64px;
   grid-template-columns: 40% 60%;
   background-color: #091317;
+
 }
 
 /* Title And Navigation(?) Styling */
 #title {
 
   margin: 0;
+  font-size: 475%;
+  color: #ffffff;
   
 }
 
 #logo {
 
   margin: 0;
+
+  width: 42px;
+  height: 42px;
 }
 
 .header {
@@ -31,45 +40,72 @@ body {
   display: flex;
   flex-direction: row;
   align-content: stretch;
-  justify-content: space-between;
-
- 
-  background-color: #7c7c7c;
-  
+  justify-content: left;
+  align-items: center;
 
 }
 
 /* List Styling */
 
-/* p {
+.listContainer {
 
-  margin-top: 0%;
-  margin-bottom: 0%;
+  grid-area: list-area;
+  overflow: auto;
+  background-color: #21212C;
 
-} */
-
-li {
-  list-style-type: "🔲";
-  display: flex;
-  justify-content: space-between;
-}
-  /* 🔳 */
-
-h1 {
-  font-size: 475%;
-  color: #ffffff;
-  /* margin-top: 0px;
-  margin-bottom: 0px; */
 }
 
 ul {
-  font-size: 175%;
+
+  width: auto;
+  font-size: 24px;
   color: #ffffff;
 
-  /* position: relative; */
-  /* margin-top: 15%;
-  margin-left: 10%;
-  width: 10cm; */
+}
+
+li {
+
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  padding: 0px 20px 0px 20px;
+  
+  background-color: #16161F;
+
+}
+
+.liMainContent {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+
+
+}
+
+.checkboxes {
+
+  width: 20px;
+  height: 20px;
+
+}
+
+p {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  flex: 1;
+
+}
+
+.listOptions {
+
+  grid-row: 3;
+  grid-column: 2;
+
 }
 
 /* Delete Button Styling */

@@ -7,6 +7,7 @@
         <title>My First Test Page</title>
         <script type="module" defer src="scripts\events.js"></script>
         <link rel="stylesheet" href="styles\styles.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
     </head>
 
@@ -15,13 +16,15 @@
         <div class="header">
 
             <div>
-                <h1 id="title">List</h1>    
+
+                <img id="logo" src="images\Logo.svg" alt="logo">
+
+                <!-- <h1 id="logo">Logo Here</h1> -->
             </div>
 
             <div>
-                <h1 id="logo">Logo Here</h1>
+                <h1 id="title">List</h1>    
             </div>
-    
 
         </div>
 
@@ -33,6 +36,10 @@
 
             <ul></ul>
         
+        </div>
+
+        <div class="listOptions">
+
             <button id="addTask" type="button">
                 <p>Add Task</p></button>
     
@@ -41,8 +48,7 @@
     
             <button id="sortList" type="button">
                 <p>Sort List</p></button>
-    
-            
+
         </div>
         
     </body>
