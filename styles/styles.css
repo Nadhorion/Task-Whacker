@@ -4,13 +4,13 @@
 body {
 
   margin: 0;
-  width: 97vw;
-  height: 97vh;
+  width: 100%;
+  height: 100vh;
   display: grid;
   grid-template-areas:
     "header header"
     "side-bar  list-area"
-    "nav  list-area";
+    "footer  footer";
   grid-template-rows: 64px 1fr 64px;
   grid-template-columns: 40% 60%;
   background-color: #091317;
@@ -43,23 +43,43 @@ body {
   justify-content: left;
   align-items: center;
 
+
+  width: 100%;
+  border-bottom: 5px solid #2dd54d;
+
 }
 
+
+
 /* List Styling */
+
+.sideBar {
+
+  grid-area: side-bar;
+  background-color: #26833c;
+  margin: 35px;
+  border-width: 5px 5px 5px 5px;
+  border-style: solid;
+  border-color: #2dd54d;
+
+}
 
 .listContainer {
 
   grid-area: list-area;
   overflow: auto;
   background-color: #21212C;
+  margin-right: 35px;
 
 }
 
 ul {
 
+  margin: 0;
   width: auto;
   font-size: 24px;
   color: #ffffff;
+  padding: 20px 20px 20px 20px;
 
 }
 
@@ -67,9 +87,12 @@ li {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: auto;
   padding: 0px 20px 0px 20px;
-  
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow-wrap: anywhere;
   background-color: #16161F;
 
 }
@@ -84,10 +107,11 @@ li {
 
 }
 
-.checkboxes {
+.checkBox {
 
-  width: 20px;
-  height: 20px;
+  width: 2em;
+  height: 2em;
+  background-color: #ff000000;
 
 }
 
@@ -116,6 +140,8 @@ button.deleteBtn {
   border-radius: 20em;
   border-color: #ff0000;
   border-style: outset;  
+  height: 3em;
+  width: 3em;
 
 }
 

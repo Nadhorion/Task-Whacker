@@ -180,8 +180,9 @@ function renderTaskList() {
     let textBox = document.createElement("p");
     textBox.textContent = taskText;
 
-    let checkBox = document.createElement("button");
-    checkBox.className = "checkboxes";
+    let checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.className = "checkBox";
     checkBox.id = i;
 
     const div = document.createElement("div");
