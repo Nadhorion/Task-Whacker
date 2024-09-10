@@ -12,7 +12,7 @@ body {
     "side-bar  list-area"
     "footer  footer";
   grid-template-rows: 64px 1fr 64px;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 550px calc(100% - 500px - 50px);
   background-color: #091317;
 
 }
@@ -21,15 +21,18 @@ body {
 #title {
 
   margin: 0;
-  font-size: 475%;
-  color: #ffffff;
+  /* font-size: 475%;
+  color: #ffffff; */
+  height: 25px;
+
   
 }
 
 #logo {
 
   margin: 0;
-
+  margin-left: 35px;
+  margin-right: 10px;
   width: 42px;
   height: 42px;
 }
@@ -49,9 +52,7 @@ body {
 
 }
 
-
-
-/* List Styling */
+/* Side Bar Styling */
 
 .sideBar {
 
@@ -62,7 +63,47 @@ body {
   border-style: solid;
   border-color: #2dd54d;
 
+  display: grid;
+  grid-template-areas:
+    "listTitle"
+    "listNotes"
+    "listActions";
+  grid-template-rows: 1fr 1.5fr .5fr;
+  grid-template-columns: 1fr;
+
 }
+
+#listTitle {
+
+  grid-area: listTitle;
+  background-color: #d7e6d4;
+  margin: 35px;
+  margin-bottom: 20px;
+
+}
+
+#listNotes {
+
+  grid-area: listNotes;
+  background-color: #185727;
+  margin: 35px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+}
+
+#listActions {
+
+  grid-area: listActions;
+  background-color: #d7e6d4;
+  margin: 35px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+/* List Styling */
 
 .listContainer {
 

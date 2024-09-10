@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="235" height="292" viewBox="0 0 235 292" fill="none" stroke="none" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Group">
+    <path id="Shape" d="M145 0L89 0L89 20L15 20C6.7146 20 0 26.7146 0 35L0 51L235 51L235 35C235 26.7146 228.285 20 220 20L145 20L145 0Z" style="fill:#F04141;fill-rule:evenodd;mix-blend-mode:normal;" />
+    <path id="Rectangle Subtract" d="M205 211L205 0L0 0L0 211C0 219.285 6.7146 226 15 226L190 226C198.285 226 205 219.285 205 211ZM62 57C62 50.3717 56.6283 45 50 45C43.3717 45 38 50.3717 38 57L38 184C38 190.628 43.3717 196 50 196C56.6283 196 62 190.628 62 184L62 57ZM114 57C114 50.3717 108.628 45 102 45C95.3717 45 90 50.3717 90 57L90 184C90 190.628 95.3717 196 102 196C108.628 196 114 190.628 114 184L114 57ZM154 45C160.628 45 166 50.3717 166 57L166 184C166 190.628 160.628 196 154 196C147.372 196 142 190.628 142 184L142 57C142 50.3717 147.372 45 154 45Z" style="fill:#F04141;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(15 66)" />
+  </g>
+</svg>
