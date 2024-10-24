@@ -48,7 +48,7 @@ body {
 
 
   width: 100%;
-  border-bottom: 5px solid #2dd54d;
+  border-bottom: 3px solid #2dd54d;
 
 }
 
@@ -59,7 +59,7 @@ body {
   grid-area: side-bar;
   background-color: #26833c;
   margin: 35px;
-  border-width: 5px 5px 5px 5px;
+  border-width: 3px 3px 3px 3px;
   border-style: solid;
   border-color: #2dd54d;
 
@@ -68,7 +68,7 @@ body {
     "listTitle"
     "listNotes"
     "listActions";
-  grid-template-rows: 1fr 1.5fr .5fr;
+  grid-template-rows: 150px 1fr 70px;
   grid-template-columns: 1fr;
 
 }
@@ -85,23 +85,43 @@ body {
 #listNotes {
 
   grid-area: listNotes;
-  background-color: #185727;
+  background-color: #091317;
   margin: 35px;
   margin-top: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+
+}
+
+#listNotes p {
+
+  color: #d7e6d4;
 
 }
 
 #listActions {
 
   grid-area: listActions;
-  background-color: #d7e6d4;
+  /* background-color: #d7e6d4; */
   margin: 35px;
+  margin-bottom: 10px;
   margin-top: 0px;
   display: flex;
   flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  column-gap: 10px;
 
 }
+
+.listAction {
+
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border-width: 0px;
+  
+}
+
 
 /* List Styling */
 
@@ -120,7 +140,7 @@ ul {
   width: auto;
   font-size: 24px;
   color: #ffffff;
-  padding: 20px 20px 20px 20px;
+  padding: 15px 15px 15px 15px;
 
 }
 
@@ -177,7 +197,7 @@ p {
 
 button.deleteBtn {
 
-  background-color: #ffffff;
+  background-color: #ffffff00;
   border-radius: 20em;
   border-color: #ff0000;
   border-style: outset;  
