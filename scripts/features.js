@@ -1,6 +1,7 @@
 let listTitle = "List";
 let taskList = [];
 
+
 const list = document.querySelector('ul');
 fakeList();
 
@@ -9,11 +10,19 @@ export function fakeList() {
   let i = 0;
   while (i < 10) {
 
-    let task = (i * i).toString();
-    let isCompleted = false;
-    let lineNumber = taskList.length;
-    let deleteTask = false;
-    let taskItem = new TaskItem(task, isCompleted, lineNumber, deleteTask);
+    let taskItem = {
+
+      task: "",
+      isCompleted: false,
+      lineNumber: 0,
+      deleteTask: false
+    
+    };
+  
+    taskItem.task = (i * i).toString();
+    taskItem.isCompleted = false;
+    taskItem.lineNumber = taskList.length - 1;
+    taskItem.deleteTask = false;
   
     taskList.push( taskItem );
 
@@ -24,16 +33,23 @@ export function fakeList() {
 }
 
 /**
- * Supplies parameters to TaskItem() and adds it to the bottom of
- * the list.
+ *Creates a taskItem and supplies its values
  */
 export function makeTaskItem() {
 
-  let task = prompt("What do you need to do?", "");
-  let isCompleted = false;
-  let lineNumber = taskList.length - 1;
-  let deleteTask = false;
-  let taskItem = new TaskItem(task, isCompleted, lineNumber, deleteTask);
+  let taskItem = {
+
+    task: "",
+    isCompleted: false,
+    lineNumber: 0,
+    deleteTask: false
+  
+  };
+
+  taskItem.task = prompt("What do you need to do?", "");
+  taskItem.isCompleted = false;
+  taskItem.lineNumber = taskList.length - 1;
+  taskItem.deleteTask = false;
   
   taskList.push( taskItem );
   renderTaskList();
@@ -101,8 +117,8 @@ export function sortTaskList() {
 
 /**
  * Takes two task list items and compares their task property.
- * If task a is greater than task b, returns a negative number
- * If task a is less than task b, returns a positive number
+ * If task 'a' is greater than task 'b', returns a negative number
+ * If task 'a' is less than task 'b', returns a positive number
  * If both tasks are the same, returns 0
  * Comparison condition is Natural Sort's
  * 
@@ -151,8 +167,8 @@ function editListTitle() {
  * First deletes list children and then adds them back with any changes.
  * Refreshes list.
  * 
- * Also adds a delete button to every list item. 
- * Can be split to new function
+ * Also adds a delete button and checkbox to every list item. 
+ * Can be split to new function?
  */
 function renderTaskList() {
 
@@ -197,21 +213,4 @@ function renderTaskList() {
 
   }
 
-}
-
-/**
- * Constructs TaskItem instance, using supplied parameters, and 
- * returns it back to call.
- * 
- * @param {string} task 
- * @param {boolean} isCompleted 
- * @param {integer} lineNumber 
- * @param {boolean} deleteTask
- */
-function TaskItem(task, isCompleted, lineNumber, deleteTask) {
-
-  this.task = task;
-  this.isCompleted = isCompleted;
-  this.lineNumber = lineNumber;
-  this.deleteTask = deleteTask;
 }
