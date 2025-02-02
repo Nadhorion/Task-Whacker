@@ -116,6 +116,75 @@ export function sortTaskList() {
 }
 
 /**
+ * 
+ * @param {event} event 
+ * @returns 
+ */
+export function liInteractions(event) {
+
+  let listItem = event.target.closest('li');
+  let clickTarget = event.target;
+
+  //find out how to access specific object is list array
+  //look through maybe rework ids I guess TT
+  if (listItem == false) {
+    
+    return;
+
+  }
+
+  if (clickTarget.className == "deleteBtn") {
+    
+    console.log(listItem.id);
+    //delete
+    deleteTaskItem(listItem.id);
+    
+
+  } else if (clickTarget.className == "checkbox") {
+
+    checkBoxUpdate(listItem.id);
+    console.log(listItem);
+    //update 'isCompleted'
+
+  } else if (clickTarget.className == "liTextBox") {
+
+    //allow text edit
+    return;
+
+  } else {
+
+    //highlight
+    return;
+    
+  }
+  //if event.target nearest li on the way via bubbling is true
+  //then check which button or section was pressed if true.
+  //if untrue just return nothing with return;
+
+  // if delete button, get id of that nearest li, and delete
+  //if check button, change checkbox state and save updated
+  //boolean value
+  //if textbox, allow editing of text
+  //if non of those, just highlight li
+
+}
+
+function checkBoxUpdate(listItem) {
+
+  if (listItem.isCompleted == false) {
+
+    listItem.isCompleted = true;
+    console.log(listItem.isCompleted);
+
+  } else {
+
+    listItem.isCompleted = false;
+    console.log(listItem.isCompleted);
+
+  }
+}
+
+/**
  * Takes two task list items and compares their task property.
  * If task 'a' is greater than task 'b', returns a negative number
  * If task 'a' is less than task 'b', returns a positive number
@@ -190,11 +259,12 @@ function renderTaskList() {
     deleteBtn.textContent = "🗑️";
     deleteBtn.className =  "deleteBtn";
     deleteBtn.id = i;
-    deleteBtn.addEventListener(
-      "click", (event) => deleteTaskItem(event.target.id));
+    //deleteBtn.addEventListener(
+   //   "click", (event) => deleteTaskItem(event.target.id));
   
     let textBox = document.createElement("p");
     textBox.textContent = taskText;
+    textBox.className = "liTextBox";
 
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
@@ -204,7 +274,6 @@ function renderTaskList() {
     const div = document.createElement("div");
     div.className = "liMainContent";
     const li = document.createElement("li");
-    //li.textContent = taskText;
     div.appendChild(checkBox);
     div.appendChild(textBox);
     li.appendChild(div);
@@ -214,3 +283,4 @@ function renderTaskList() {
   }
 
 }
+
