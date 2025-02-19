@@ -1,3 +1,8 @@
+import { generateUID } from "./uidGen.js";
+
+
+
+
 let listTitle = "List";
 let taskList = [];
 
@@ -14,14 +19,14 @@ export function fakeList() {
 
       task: "",
       isCompleted: false,
-      lineNumber: 0,
+      uid: 0,
       deleteTask: false
     
     };
   
     taskItem.task = (i * i).toString();
     taskItem.isCompleted = false;
-    taskItem.lineNumber = taskList.length - 1;
+    taskItem.uid = generateUID();
     taskItem.deleteTask = false;
   
     taskList.push( taskItem );
@@ -41,14 +46,14 @@ export function makeTaskItem() {
 
     task: "",
     isCompleted: false,
-    lineNumber: 0,
+    uid: 0,
     deleteTask: false
   
   };
 
   taskItem.task = prompt("What do you need to do?", "");
   taskItem.isCompleted = false;
-  taskItem.lineNumber = taskList.length - 1;
+  taskItem.uid = generateUID();
   taskItem.deleteTask = false;
   
   taskList.push( taskItem );
